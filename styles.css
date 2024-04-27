@@ -17,3 +17,150 @@ nav ul li {
     width: 100%;
     display: none;
 }
+
+/* Agregar estilos para el menú */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        background-color: #333;
+        z-index: 999;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .menu-toggle:checked + .menu-icon + nav {
+        display: flex;
+    }
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content-container {
+    flex: 1;
+}
+
+.website-logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-menus {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-item-footer {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-container {
+    display: flex;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background-color: #fff; /* Cambia esto al color de tu preferencia */
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Agrega tus íconos de redes sociales aquí */
+.social-link:nth-child(1) {
+    /* Estilos del primer ícono */
+}
+
+.social-link:nth-child(2) {
+    /* Estilos del segundo ícono */
+}
+
+.social-link:nth-child(3) {
+    /* Estilos del tercer ícono */
+}
