@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videoclub - Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Videoclub</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/Pages/catalogo.html">Catálogo</a></li>
+                <li><a href="/nosotros.js">Nosotros</a></li>
+                <li><a href="/Pages/registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="registro-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        <label for="confirm-contrasena">Confirmar Contraseña:</label>
+        <input type="password" id="confirm-contrasena" name="confirm-contrasena" required>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+        <button type="submit">Registrarse</button>
+    </form>
+    <script src="registro.js"></script>
+</body>
+</html>
