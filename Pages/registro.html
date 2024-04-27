@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videoclub - Registro</title>
     <link rel="stylesheet" href="/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
 </head>
+
 <body>
+    <!-- Agrega el logo y el menú de navegación -->
     <header>
-        <h1>Videoclub</h1>
+        <div class="header-logo">
+            <img src="../img/logo.svg" alt="Videoclub Logo">
+        </div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav>
@@ -20,53 +26,54 @@
             </ul>
         </nav>
     </header>
-    <form id="registro-form">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required>
-        <label for="confirm-contrasena">Confirmar Contraseña:</label>
-        <input type="password" id="confirm-contrasena" name="confirm-contrasena" required>
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-        <button type="submit">Registrarse</button>
-    </form>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-container">
+    <div class="container">
+        <form id="registro-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <label for="confirm-contrasena">Confirmar Contraseña:</label>
+            <input type="password" id="confirm-contrasena" name="confirm-contrasena" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content-container">
+                <h3 class="website-logo">Videoclub</h3>
+                <span class="footer-info">Tu sitio para alquilar películas y series</span>
+                <a href="mailto:info@videoclub.com" class="footer-info">tuvideoclubamigo@gmail.com</a>
+            </div>
+            <div class="footer-menus">
                 <div class="footer-content-container">
-                    <h3 class="website-logo">Videoclub</h3>
-                    <span class="footer-info">Tu sitio para alquilar películas y series</span>
-                    <a href="mailto:info@videoclub.com" class="footer-info">tuvideoclubamigo@gmail.com</a>
-                </div>
-                <div class="footer-menus">
-                    <div class="footer-content-container">
-                        <span class="menu-title">Políticas</span>
-                        <a href="Pages/privacidad.html" class="menu-item-footer">Privacidad</a>
-                        <a href="Pages/cookies.html" class="menu-item-footer">Cookies</a>
-                        <a href="Pages/terminos.html" class="menu-item-footer">Términos de servicio</a>
-                    </div>
-                    <div class="footer-content-container">
-                        <span class="menu-title">Menú</span>
-                        <a href="index.html" class="menu-item-footer">Inicio</a>
-                        <a href="Pages/catalogo.html" class="menu-item-footer">Catálogo</a>
-                        <a href="Pages/nosotros.html" class="menu-item-footer">Nosotros</a>
-                        <a href="Pages/registro.html" class="menu-item-footer">Registro</a>
-                    </div>
+                    <span class="menu-title">Políticas</span>
+                    <a href="Pages/privacidad.html" class="menu-item-footer">Privacidad</a>
+                    <a href="Pages/cookies.html" class="menu-item-footer">Cookies</a>
+                    <a href="Pages/terminos.html" class="menu-item-footer">Términos de servicio</a>
                 </div>
                 <div class="footer-content-container">
-                    <span class="menu-title">Redes Sociales</span>
-                    <div class="social-container">
-                        <a href="#" class="social-link"></a>
-                        <a href="#" class="social-link"></a>
-                        <a href="#" class="social-link"></a>
-                    </div>
+                    <span class="menu-title">Menú</span>
+                    <a href="index.html" class="menu-item-footer">Inicio</a>
+                    <a href="Pages/catalogo.html" class="menu-item-footer">Catálogo</a>
+                    <a href="Pages/nosotros.html" class="menu-item-footer">Nosotros</a>
+                    <a href="Pages/registro.html" class="menu-item-footer">Registro</a>
                 </div>
             </div>
-        </footer>
-    <script src="registro.js"></script>
+            <div class="footer-content-container">
+                <span class="menu-title">Redes Sociales</span>
+                <div class="social-container">
+                    <a href="#" class="social-link"></a>
+                    <a href="#" class="social-link"></a>
+                    <a href="#" class="social-link"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/registro.js"></script>
 </body>
 </html>

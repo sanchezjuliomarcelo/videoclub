@@ -11,19 +11,16 @@ header {
     color: white;
     padding: 20px;
     position: relative;
-}
-
-.header-logo {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-logo img {
     width: 80px;
     height: auto;
-    margin-right: 10px;
     max-width: 100%;
 }
-
 
 .menu-toggle {
     display: none;
@@ -34,22 +31,13 @@ header {
     cursor: pointer;
     font-size: 24px;
     color: #ec0b0b;
-    position: absolute;
-    top: 20px;
-    right: 20px; /* Modificado */
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end; /* Modificado */
 }
 
 nav ul {
     list-style-type: none;
-    margin: 20;
-    padding: 20;
+    margin: 0;
+    padding: 0;
     display: flex;
-
 }
 
 nav ul li {
@@ -73,7 +61,7 @@ nav ul li a {
         width: 100%;
         position: fixed;
         top: 60px;
-        right: 0; /* Modificado */
+        right: 0;
         background-color: #333;
         z-index: 999;
     }
@@ -81,12 +69,12 @@ nav ul li a {
     nav.active {
         display: flex;
         flex-direction: column;
-        align-items: flex-end; /* Modificado */
+        align-items: flex-end;
     }
 
     nav ul {
         flex-direction: column;
-        align-items: flex-end; /* Modificado */
+        align-items: flex-end;
     }
 
     nav ul li {
@@ -95,7 +83,7 @@ nav ul li a {
 
     nav ul li a {
         padding: 10px;
-        color: #fff; /* Añadido */
+        color: #fff;
     }
 
     .menu-toggle:checked + .menu-icon + nav {
@@ -115,22 +103,6 @@ nav ul li a {
     margin: 0 auto;
 }
 
-/* Estilos para el contenido */
-section {
-    padding: 20px;
-    text-align: justify;
-}
-
-h1 {
-    font-size: 35px;
-    color: #333;
-}
-
-h2 {
-    font-size: 25px;
-    color: #3500f3;
-}
-
 /* Estilos del footer */
 footer {
     background-color: #333;
@@ -139,11 +111,11 @@ footer {
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 .footer-content-container {
@@ -186,28 +158,75 @@ footer {
 }
 
 /* Estilos para los íconos de redes sociales */
-.social-link:nth-child(1) {
-    background-image: url('/img/rr.ss/FacebookBlanco.png'); /* Ruta al ícono de Facebook */
-}
-
-.social-link:nth-child(2) {
-    background-image: url('/img/rr.ss/TwitterBlanco.png'); /* Ruta al ícono de Twitter */
-}
-
-.social-link:nth-child(3) {
-    background-image: url('/img/rr.ss/InstagramBlanco.png'); /* Ruta al ícono de Instagram */
-}
-
-/* Ajustar el tamaño del ícono */
 .social-link {
     width: 30px; 
     height: 30px; 
     background-size: cover; 
-}
-
-/* Opcional: Estilo del contenedor */
-.social-link {
     display: inline-block; 
     margin-right: 10px; 
 }
 
+.social-link:nth-child(1) {
+    background-image: url('/img/rr.ss/FacebookBlanco.png'); 
+}
+
+.social-link:nth-child(2) {
+    background-image: url('/img/rr.ss/TwitterBlanco.png'); 
+}
+
+.social-link:nth-child(3) {
+    background-image: url('/img/rr.ss/InstagramBlanco.png'); 
+}
+
+/*** FORMULARIO DE REGISTRO ****/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#registro-form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #registro-form {
+        width: 90%;
+    }
+}
