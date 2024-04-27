@@ -13,22 +13,21 @@
 - **Catálogo**
   - *Utilidad:* Mostrar una lista completa de películas y series disponibles para alquilar.
   - *Contenido y Funcionalidad:*
-    - Barra de búsqueda para encontrar películas y series por título, género, año, etc.
+    - Barra de búsqueda para encontrar películas y series por tipo, título, género, año.
     - Lista de películas y series con imágenes, títulos y breve descripción.
-    - Opciones para filtrar por género, año, popularidad, etc.
-    - Botones para alquilar películas y series.
+    - Opciones para filtrar por género, año, puntaje.
+    - Botones para alquilar películas y/o series.
 
-- **Acerca de**
-  - *Utilidad:* Proporcionar información sobre el videoclub y su equipo.
+- **Nosotros**
+  - *Utilidad:* Proporcionar información sobre el sitio videoclub y su equipo de desarrollo.
   - *Contenido y Funcionalidad:*
     - Historia del videoclub y su misión.
     - Perfiles del equipo detrás del videoclub.
-    - Testimonios de clientes satisfechos (si los hay).
     - Formulario de contacto para consultas.
 
 - **Registro**
   - *Utilidad:* Permitir a los usuarios registrarse para obtener una cuenta en el videoclub.
   - *Contenido y Funcionalidad:*
-    - Formulario de registro con campos para nombre, correo electrónico, contraseña, etc.
-    - Validación de campos y mensajes de error si es necesario.
+    - Formulario de registro con campos para nombre, apellido, telefono, email, contraseña.
+    - Validación de campos y mensajes de error.
     - Botón de registro que redirige a la página de inicio de sesión después del registro exitoso.
