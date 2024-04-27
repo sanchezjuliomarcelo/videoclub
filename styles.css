@@ -1,24 +1,30 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
 header {
     background-color: #333;
     color: white;
     padding: 20px;
+    position: relative;
 }
 
-nav ul {
-    list-style-type: none;
+.header-logo {
+    display: inline-block;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.header-logo img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    max-width: 100%;
 }
 
-.banner img {
-    width: 100%;
-    display: none;
-}
 
-/* Agregar estilos para el menú */
 .menu-toggle {
     display: none;
 }
@@ -27,19 +33,23 @@ nav ul li {
     display: none;
     cursor: pointer;
     font-size: 24px;
-    color: #fff;
+    color: #ec0b0b;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Modificado */
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Modificado */
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 20;
+    padding: 20;
     display: flex;
+
 }
 
 nav ul li {
@@ -63,6 +73,7 @@ nav ul li a {
         width: 100%;
         position: fixed;
         top: 60px;
+        right: 0; /* Modificado */
         background-color: #333;
         z-index: 999;
     }
@@ -70,11 +81,12 @@ nav ul li a {
     nav.active {
         display: flex;
         flex-direction: column;
+        align-items: flex-end; /* Modificado */
     }
 
     nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end; /* Modificado */
     }
 
     nav ul li {
@@ -83,11 +95,40 @@ nav ul li a {
 
     nav ul li a {
         padding: 10px;
+        color: #fff; /* Añadido */
     }
 
     .menu-toggle:checked + .menu-icon + nav {
         display: flex;
     }
+}
+
+/* Estilos para el banner */
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para el contenido */
+section {
+    padding: 20px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 35px;
+    color: #333;
+}
+
+h2 {
+    font-size: 25px;
+    color: #3500f3;
 }
 
 /* Estilos del footer */
