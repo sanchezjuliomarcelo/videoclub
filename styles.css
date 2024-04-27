@@ -185,23 +185,29 @@ footer {
     display: flex;
 }
 
-.social-link {
-    width: 40px;
-    height: 40px;
-    background-color: #fff; /* Cambia esto al color de tu preferencia */
-    margin-right: 10px;
-    border-radius: 50%;
-}
-
-/* Agrega tus íconos de redes sociales aquí */
+/* Estilos para los íconos de redes sociales */
 .social-link:nth-child(1) {
-    /* Estilos del primer ícono */
+    background-image: url('/img/rr.ss/FacebookBlanco.png'); /* Ruta al ícono de Facebook */
 }
 
 .social-link:nth-child(2) {
-    /* Estilos del segundo ícono */
+    background-image: url('/img/rr.ss/TwitterBlanco.png'); /* Ruta al ícono de Twitter */
 }
 
 .social-link:nth-child(3) {
-    /* Estilos del tercer ícono */
+    background-image: url('/img/rr.ss/InstagramBlanco.png'); /* Ruta al ícono de Instagram */
 }
+
+/* Ajustar el tamaño del ícono */
+.social-link {
+    width: 30px; 
+    height: 30px; 
+    background-size: cover; 
+}
+
+/* Opcional: Estilo del contenedor */
+.social-link {
+    display: inline-block; 
+    margin-right: 10px; 
+}
+
