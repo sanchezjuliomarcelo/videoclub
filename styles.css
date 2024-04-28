@@ -150,7 +150,7 @@ nav ul li a {
 
 .image-container img {
     width: 100%;
-    max-width: 200px; /* Ajusta el tamaño de acuerdo a tus necesidades */
+    max-width: 200px; 
     border-radius: 10px;
 }
 
@@ -222,15 +222,15 @@ footer {
 }
 
 .social-link:nth-child(1) {
-    background-image: url('/img/rr.ss/FacebookBlanco.png'); 
+    background-image: url('img/rr.ss/FacebookBlanco.png'); 
 }
 
 .social-link:nth-child(2) {
-    background-image: url('/img/rr.ss/TwitterBlanco.png'); 
+    background-image: url('img/rr.ss/TwitterBlanco.png'); 
 }
 
 .social-link:nth-child(3) {
-    background-image: url('/img/rr.ss/InstagramBlanco.png'); 
+    background-image: url('img/rr.ss/InstagramBlanco.png'); 
 }
 
 /*** FORMULARIO DE REGISTRO ****/
@@ -280,8 +280,3 @@ button:hover {
 }
 
 /* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    #registro-form {
-        width: 90%;
-    }
-}
