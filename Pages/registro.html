@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Videoclub - Catálogo</title>
-        <!-- Agrega las fuentes de Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
-        <!-- Agrega tu hoja de estilos personalizada -->
-        <link rel="stylesheet" href="/styles.css" />
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="../img/favicon.png">
-    </head>
-
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videoclub - Registro</title>
+    <!-- Agrega las fuentes de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+    <!-- Agrega tu hoja de estilos personalizada -->
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+</head>
 <body>
     <!-- Agrega el logo y el menú de navegación -->
     <header>
@@ -26,23 +25,23 @@
             <ul>
                 <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/Pages/catalogo.html">Catálogo</a></li>
-                <li><a href="/nosotros.js">Nosotros</a></li>
+                <li><a href="/Pages/nosotros.html">Nosotros</a></li>
                 <li><a href="/Pages/registro.html">Registro</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <form id="registro-form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Nombre y Apellido">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="ejemplo@mail.com">
             <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
+            <input type="password" id="contrasena" name="contrasena" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Mínimo 8 caracteres, con letras y números" placeholder="Mínimo 8 caracteres, con letras y números">
             <label for="confirm-contrasena">Confirmar Contraseña:</label>
-            <input type="password" id="confirm-contrasena" name="confirm-contrasena" required>
+            <input type="password" id="confirm-contrasena" name="confirm-contrasena" required placeholder="Confirmar Contraseña">
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
+            <input type="tel" id="telefono" name="telefono" required pattern="^[1-9]\d{8}$" title="Sin el 0 y sin el 15" placeholder="Sin el 0 y sin el 15">
             <button type="submit">Registrarse</button>
         </form>
     </div>
@@ -51,7 +50,7 @@
         <div class="footer-container">
             <div class="footer-content-container">
                 <span class="menu-title">Políticas</span>
-                <a href="/subpages/privacidad.html" class="menu-item-footer">Politicas de privacidad</a>
+                <a href="/subpages/privacidad.html" class="menu-item-footer">Políticas de privacidad</a>
                 <a href="/subpages/termycond.html" class="menu-item-footer">Términos de servicio</a>
             </div>
             <div class="footer-menus">
@@ -82,3 +81,4 @@
     <script src="/registro.js"></script>
 </body>
 </html>
+

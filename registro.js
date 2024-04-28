@@ -7,16 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Obtener los valores de los campos del formulario
       const nombre = document.getElementById("nombre").value.trim();
       const email = document.getElementById("email").value.trim();
-      const contrasena = document.getElementById("contrasena").value.trim();
-      const confirmContrasena = document.getElementById("confirm-contrasena").value.trim();
+      const contrasena = document.getElementById("contrasena").value;
+      const confirmContrasena = document.getElementById("confirm-contrasena").value;
       const telefono = document.getElementById("telefono").value.trim();
-
-      // Mostrar la información cargada en los campos en la consola
-      console.log("Nombre:", nombre);
-      console.log("Email:", email);
-      console.log("Contraseña:", contrasena);
-      console.log("Confirmar Contraseña:", confirmContrasena);
-      console.log("Teléfono:", telefono);
 
       // Validar que todas las contraseñas sean iguales
       if (contrasena !== confirmContrasena) {
@@ -24,10 +17,36 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
       }
 
-      // Mostrar mensaje de éxito si todo está correcto
-      alert("¡Registro exitoso!");
+      // Crear objeto de usuario
+      const usuario = {
+          nombre: nombre,
+          email: email,
+          contrasena: contrasena,
+          telefono: telefono
+      };
+
+      // Convertir objeto a formato JSON
+      const usuarioJSON = JSON.stringify(usuario);
+
+      // Crear un objeto Blob para almacenar el JSON
+      const blob = new Blob([usuarioJSON], { type: "application/json" });
+
+      // Crear enlace de descarga
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "usuario.json";
+
+      // Simular clic en el enlace para descargar el archivo
+      document.body.appendChild(a);
+      a.click();
+
+      // Liberar recursos
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+
+      // Limpiar formulario
       formularioRegistro.reset();
   });
 });
-
 
