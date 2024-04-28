@@ -10,6 +10,26 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Preheader */
+.preheader {
+    height: 50px;
+    background: linear-gradient(to bottom, #FF5F6D, #FFC371);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preheader-content {
+    text-align: center;
+}
+
+.preheader h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
 /* Estilos del header */
 header {
     background-color: #333;
