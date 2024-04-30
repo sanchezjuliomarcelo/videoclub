@@ -28,7 +28,9 @@
     <!-- Logo y menú -->
     <header>
         <div class="header-logo">
-            <img src="img/logo.svg" alt="Videoclub Logo">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="Videoclub Logo">
+            </a>
         </div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -51,17 +53,19 @@
     <section class="container">
         <div class="content">
             <div class="image-container">
-                <img src="img/imagenes/Videoclub.png" alt="Imagen Izquierda">
+                <img src="img/imagenes/popcorn.jpg" alt="Imagen Izquierda">
             </div>
             <div class="text-container">
-                <h1>Videoclub</h1>
-                <p>Bienvenido al Videoclub, tu destino para alquilar las mejores películas y series. Descubre una amplia selección de contenido de entretenimiento y disfruta de un servicio de calidad desde la comodidad de tu hogar.</p>
+                <h1 id="titulo-videoclub">Videoclub</h1>
+                <p id="parrafo-videoclub">Bienvenido al Videoclub, tu destino para alquilar las mejores películas y series. Descubre una amplia selección de contenido de entretenimiento y disfruta de un servicio de calidad desde la comodidad de tu hogar.</p>
+                <a href="pages/registro.html">"<button class="btn-register">Registrarse</button></a>
             </div>
         </div>
         <div class="content">
             <div class="text-container">
-                <h2>Descubre las Películas Más Populares del Momento</h2>
-                <p>Sumérgete en nuestro catálogo y encuentra una amplia selección de las películas más emocionantes, desde los últimos estrenos de Hollywood hasta los clásicos que nunca pasan de moda. Disfruta de una experiencia cinematográfica única desde la comodidad de tu hogar.</p>
+                <h2 id="titulo-peliculas">Descubre las Películas Más Populares del Momento</h2>
+                <p id="parrafo-peliculas">Sumérgete en nuestro catálogo y encuentra una amplia selección de las películas más emocionantes, desde los últimos estrenos de Hollywood hasta los clásicos que nunca pasan de moda. Disfruta de una experiencia cinematográfica única desde la comodidad de tu hogar.</p>
+                <a href="pages/catalogo.html">"<button class="btn-learn-more">Conocer más</button></a>
             </div>
             <div class="image-container">
                 <img src="img/imagenes/movies.jpg" alt="Imagen Derecha">
@@ -72,13 +76,14 @@
                 <img src="img/imagenes/series.jpeg" alt="Imagen Izquierda">
             </div>
             <div class="text-container">
-                <h2>Explora Nuevas Aventuras con las Mejores Series</h2>
-                <p>Prepárate para maratones inolvidables con nuestras series exclusivas. Desde emocionantes dramas hasta divertidas comedias, nuestro catálogo de series te ofrece una variedad de opciones para todos los gustos. No te pierdas los episodios más recientes y descubre tus nuevas obsesiones televisivas.</p>
+                <h2 id="titulo-series">Explora Nuevas Aventuras con las Mejores Series</h2>
+                <p id="parrafo-series">Prepárate para maratones inolvidables con nuestras series exclusivas. Desde emocionantes dramas hasta divertidas comedias, nuestro catálogo de series te ofrece una variedad de opciones para todos los gustos. No te pierdas los episodios más recientes y descubre tus nuevas obsesiones televisivas.</p>
+                <a href="pages/catalogo.html">"<button class="btn-learn-more">Conocer más</button></a>
             </div>
         </div>
     </section>
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-content-container">
                 <h3 class="website-logo">Videoclub</h3>
@@ -107,12 +112,13 @@
                     <a href="#" class="social-link"></a>
                 </div>
             </div>
-            <p>&copy; 2024 Videoclub. Todos los derechos reservados.</p>
         </div>
+        <p>&copy; 2024 Videoclub. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 
 </html>
+
 

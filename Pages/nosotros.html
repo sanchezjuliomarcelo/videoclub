@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Videoclub - Catálogo</title>
-        <!-- Agrega las fuentes de Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
-        <!-- Agrega tu hoja de estilos personalizada -->
-        <link rel="stylesheet" href="../styles.css" />
-        <link rel="stylesheet" href="../StylePages/style-nosotros.css">
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="../img/favicon.png">
-    </head>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videoclub - Nosotros</title>
+        <!-- SEO -->
+        <meta name="description" content="Conoce más sobre el Videoclub y el equipo apasionado que está detrás de él. Descubre nuestra historia, nuestra misión y cómo trabajamos para ofrecerte la mejor experiencia de entretenimiento posible.">
+        <meta name="keywords" content="sobre nosotros, historia del videoclub, equipo del videoclub, misión del videoclub, información del videoclub, contacto del videoclub.">
+    <!-- Agrega las fuentes de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+    <!-- Agrega tu hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../StylePages/style-nosotros.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+</head>
 
 <body>
     <!-- Agrega el logo y el menú de navegación -->
     <header>
         <div class="header-logo">
-            <img src="../img/logo.svg" alt="Videoclub Logo">
+            <a href="../index.html">
+                <img src="../img/logo.svg" alt="Videoclub Logo">
+            </a>
         </div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -35,42 +41,46 @@
     <section class="container">
         <div>
             <h1>equipo</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa molestias alias at praesentium unde temporibus sed minus cum porro neque voluptas mollitia consequatur nisi reprehenderit accusantium minima odit, nesciunt impedit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa molestias alias at praesentium unde
+                temporibus sed minus cum porro neque voluptas mollitia consequatur nisi reprehenderit accusantium minima
+                odit, nesciunt impedit.</p>
         </div>
     </section>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-container">
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content-container">
+                <h3 class="website-logo">Videoclub</h3>
+                <span class="footer-info">Tu sitio para alquilar películas y series</span>
+                <a href="mailto:info@videoclub.com" class="footer-info">tuvideoclubamigo@gmail.com</a>
+            </div>
+            <div class="footer-menus">
                 <div class="footer-content-container">
-                    <h3 class="website-logo">Videoclub</h3>
-                    <span class="footer-info">Tu sitio para alquilar películas y series</span>
-                    <a href="mailto:info@videoclub.com" class="footer-info">tuvideoclubamigo@gmail.com</a>
-                </div>
-                <div class="footer-menus">
-                    <div class="footer-content-container">
-                        <span class="menu-title">Políticas</span>
-                        <a href="../subpages/privacidad.html" class="menu-item-footer">Politicas de privacidad</a>
-                        <a href="../subpages/termycond.html" class="menu-item-footer">Términos de servicio</a>
-                    </div>
-                    <div class="footer-content-container">
-                        <span class="menu-title">Menú</span>
-                        <a href="../index.html" class="menu-item-footer">Inicio</a>
-                        <a href="catalogo.html" class="menu-item-footer">Catálogo</a>
-                        <a href="nosotros.html" class="menu-item-footer">Nosotros</a>
-                        <a href="registro.html" class="menu-item-footer">Registro</a>
-                    </div>
+                    <span class="menu-title">Políticas</span>
+                    <a href="../subpages/privacidad.html" class="menu-item-footer">Politicas de privacidad</a>
+                    <a href="../subpages/termycond.html" class="menu-item-footer">Términos de servicio</a>
                 </div>
                 <div class="footer-content-container">
-                    <span class="menu-title">Redes Sociales</span>
-                    <div class="social-container">
-                        <a href="#" class="social-link"></a>
-                        <a href="#" class="social-link"></a>
-                        <a href="#" class="social-link"></a>
-                    </div>
+                    <span class="menu-title">Menú</span>
+                    <a href="../index.html" class="menu-item-footer">Inicio</a>
+                    <a href="catalogo.html" class="menu-item-footer">Catálogo</a>
+                    <a href="nosotros.html" class="menu-item-footer">Nosotros</a>
+                    <a href="registro.html" class="menu-item-footer">Registro</a>
                 </div>
             </div>
-        </footer>
+            <div class="footer-content-container">
+                <span class="menu-title">Redes Sociales</span>
+                <div class="social-container">
+                    <a href="#" class="social-link"></a>
+                    <a href="#" class="social-link"></a>
+                    <a href="#" class="social-link"></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 Videoclub. Todos los derechos reservados.</p>
+    </footer>
     <script src="../script.js"></script>
 </body>
+
 </html>
