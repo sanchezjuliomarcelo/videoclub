@@ -1,0 +1,43 @@
+/*catalogo*/
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .movie {
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .movie img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  
+  
+  
+  .movie-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .movie {
+      width: 300px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    .movie img {
+      width: 100%;
+      border-radius: 5px;
+    }

@@ -142,15 +142,11 @@ nav ul li a:hover {
 /* Estilos para el banner */
 .banner {
     width: 100%;
-    height: 60vh;
-    overflow: hidden;
+    display: flex;
 }
 
 .banner img {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    object-fit: cover;
+    width: 100%;   
 }
 
 /* Estilos para el cuerpo */
@@ -472,109 +468,3 @@ footer {
     }
 }
 
-/*registro*/
-
-.registro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /* Ajusta la altura según tus necesidades */
-    margin-bottom: 80px;
-}
-
-.registro-content {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    /* La imagen arriba y el formulario abajo */
-    gap: 20px;
-    /* Espacio entre la imagen y el formulario */
-    max-width: 600px;
-    /* Ancho máximo del contenido */
-    width: 80%;
-    /* Ancho del contenido */
-}
-
-.registro-content img {
-    width: 100%;
-    /* Hace la imagen responsive */
-    height: auto;
-    /* Ajusta automáticamente la altura */
-}
-
-#registro-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#registro-form label,
-#registro-form input,
-#registro-form button {
-    width: 100%;
-    /* Ancho completo */
-    max-width: 400px;
-    /* Ancho máximo */
-}
-
-#registro-form button {
-    margin-top: 20px;
-    /* Espacio entre el formulario y el botón */
-    background-color: #007bff;
-    /* Color de fondo del botón */
-    color: white;
-    /* Color del texto del botón */
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Transición suave del color de fondo */
-}
-
-#registro-form button:hover {
-    background-color: #0056b3;
-    /* Cambio de color de fondo al pasar el ratón */
-}
-
-.movie-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.movie {
-  width: 300px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.movie img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-
-/*catalogo*/
-
-.movie-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .movie {
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  .movie img {
-    width: 100%;
-    border-radius: 5px;
-  }
