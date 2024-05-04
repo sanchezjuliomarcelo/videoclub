@@ -127,6 +127,17 @@ nav ul li a:hover {
     display: flex;
   }
 
+  .container-estrenos{
+    height: 40vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card{
+    border: 1px solid white;
+  }
+
+
   /* Cambio en el orden de las imágenes y el texto */
   .content {
     flex-direction: column-reverse;
@@ -151,7 +162,7 @@ nav ul li a:hover {
 
 /* Estilos para el contenedor de Estrenos */
 .container-estrenos{
-    width: 100vw;
+    width: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -159,7 +170,7 @@ nav ul li a:hover {
 }
 
 .container-estrenos > h2 {
-    margin: 2% 0;
+    margin: 1% 0;
     color: white;
     font-size: 4vw;
     text-shadow: 21px 6px 6px rgba(15,159,225,0.63);
@@ -229,6 +240,7 @@ nav ul li a:hover {
     padding: 0;
 }
 
+
 /* Fin de estilos para el contenedor de Estrenos */
 
 /* Estilos para el cuerpo */
@@ -253,9 +265,11 @@ nav ul li a:hover {
 
 
 .image-container {
+    border-radius: 10px;
     flex: 1;
     margin: 20px 20px 20px 20px;
     transition: 0.3s ease;
+    overflow: hidden;
 }
 .image-container:hover{
     transform: scale(1.05);

@@ -1,43 +1,90 @@
 /*catalogo*/
+.contenedor-categorias {
+  width: 100%;
+  background-color: rgb(4, 4, 59);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.movie-container * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.contenedor-categorias p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.division-categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s ease;
+}
+.card-categoria {
+  width: 150px; /* Ancho de la tarjeta */
+  height: 150px; /* Altura de la tarjeta */
+  border-radius: 50%; /* Hace que la tarjeta sea circular */
+  border: 5px solid white; /* Borde blanco */
+  background-color: rgb(4, 4, 59); /* Color de fondo de la tarjeta */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.division-categoria:hover{
+  transform: scale(1.2);
+}
+
+.card-categoria img{
+  width: 60%;
+}
+
+.encabezado-catalogo {
+  color:white;
+}
+
+.movie img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
 .movie-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.movie {
+  width: 300px;
+  height: 350px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-categorias{
+    height: 30vh;
   }
-  
-  .movie {
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+
+  .card-categoria {
+    width: 120px;
+    height: 120px;
   }
-  
-  .movie img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  
-  
-  
-  
-  .movie-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    
-    .movie {
-      width: 300px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      background-color: white;
-    }
-    
-    .movie img {
-      width: 100%;
-      border-radius: 5px;
-    }
+}
