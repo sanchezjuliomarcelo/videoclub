@@ -31,3 +31,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(cambiarTexto, 3000);
 });
+
+document.querySelectorAll('.card').forEach(item => {
+    item.addEventListener('mouseover', event => {
+      const estrenos = document.getElementById('estrenos');
+      const backgroundImage = window.getComputedStyle(event.target).getPropertyValue('background-image');
+      estrenos.style.backgroundImage = backgroundImage;
+    });
+  });

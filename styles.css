@@ -1,470 +1,571 @@
 /* Estilos generales */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('img/imagenes/background3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("img/imagenes/background3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Preheader */
 .preheader {
-    height: 50px;
-    background: linear-gradient(to bottom, #3003f8, #05e0f0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 50px;
+  background: linear-gradient(to bottom, #3003f8, #05e0f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preheader-content {
-    text-align: center;
+  text-align: center;
 }
 
 .preheader h1 {
-    color: #fff;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
 }
 
 /* Estilos del header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 50px 2px 50px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 50px 2px 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo img {
-    width: 90px;
-    height: auto;
-    max-width: 100%;
+  width: 90px;
+  height: auto;
+  max-width: 100%;
 }
 
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
 .menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 2.5rem;
-    color: #3003f8;
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #3003f8;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
-    transition: 0.3s ease;
+  margin: 0 15px;
+  transition: 0.3s ease;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
 }
 
 nav ul li:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 nav ul li a:hover {
-    color: #3003f8;
+  color: #3003f8;
 }
 
 .activo {
-    color: #05e0f0;
+  color: #05e0f0;
 }
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
+  .menu-icon {
+    display: block;
+  }
 
-    nav {
-        display: none;
-        width: 100%;
-        position: fixed;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        z-index: 999;
-    }
+  nav {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    z-index: 999;
+  }
 
-    nav.active {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
-    nav ul {
-        flex-direction: column;
-        align-items: flex-end;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
-    nav ul li {
-        margin: 15px 0;
-    }
+  nav ul li {
+    margin: 15px 0;
+  }
 
-    nav ul li a {
-        padding: 10px;
-        color: #fff;
-    }
+  nav ul li a {
+    padding: 10px;
+    color: #fff;
+  }
 
-    .menu-toggle:checked+.menu-icon+nav {
-        display: flex;
-    }
+  .menu-toggle:checked + .menu-icon + nav {
+    display: flex;
+  }
 
-    /* Cambio en el orden de las imágenes y el texto */
-    .content {
-        flex-direction: column-reverse;
-    }
+  /* Cambio en el orden de las imágenes y el texto */
+  .content {
+    flex-direction: column-reverse;
+  }
 
-    .image-container,
-    .text-container {
-        width: 100%;
-        margin: 0;
-    }
+  .image-container,
+  .text-container {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 /* Estilos para el banner */
 .banner {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .banner img {
-    width: 100%;   
+  width: 100%;
 }
+
+/* Estilos para el contenedor de Estrenos */
+.container-estrenos{
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-estrenos > h2 {
+    margin: 2% 0;
+    color: white;
+    font-size: 4vw;
+    text-shadow: 21px 6px 6px rgba(15,159,225,0.63);
+  }
+
+.estrenos {
+  width: 70vw;
+  height: 50vh;
+  justify-content: center;
+  overflow: hidden;
+  transition: background-image 0.5s ease;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+  background-position-x: center;
+}
+.card {
+  width: 20vw;
+  height: 20%;
+  background-color: #ccc;
+  background-size: cover;
+  margin: 0 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 5px solid white;
+  transition: 0.3s ease;
+  color: white;
+  transform: translateY(-20px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+#card1 {
+  background-image: url("./img/peliculas/deadpool-3.webp");
+}
+
+#card2 {
+  background-image: url("./img/peliculas/joker-folie-a-deux-1.webp");
+}
+
+#card3 {
+  background-image: url("./img/peliculas/mi-viillano-fav-4.jpg");
+}
+
+#card4{
+  background-image: url("./img/peliculas/venom-3.jpg");
+}
+
+#card5{
+  background-image: url("./img/peliculas/survivors-NodeJs.jpg");
+}
+
+.card p{
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fin de estilos para el contenedor de Estrenos */
 
 /* Estilos para el cuerpo */
 
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2% 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
+
 
 .image-container {
     flex: 1;
     margin: 20px 20px 20px 20px;
+    transition: 0.3s ease;
+}
+.image-container:hover{
+    transform: scale(1.05);
 }
 
 .image-container img {
-    width: 100%;
+  width: 100%;
 }
 
 .text-container {
-    flex: 1;
-    margin: 20px 20px 20px 20px;
+  flex: 1;
+  margin: 20px 20px 20px 20px;
 }
-
 
 /*botones*/
 button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .btn-register {
-    background: linear-gradient(to right, #3003f8, #05e0f0);
+  background: linear-gradient(to right, #3003f8, #05e0f0);
 }
 
 .btn-learn-more {
-    background: linear-gradient(to right, #3003f8, #05e0f0);
+  background: linear-gradient(to right, #3003f8, #05e0f0);
 }
 
 /* Efecto al pasar el mouse */
 button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Efecto al hacer click */
 button:active {
-    transform: translateY(1px);
-    box-shadow: none;
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
 /* fuente home*/
 #titulo-videoclub {
-    font-size: 4rem;
-    color: black;
-    position: relative;
-    overflow: hidden;
+  font-size: 4rem;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
 
 #titulo-videoclub::before {
-    content: 'Videoclub';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #00ffff;
-    text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    z-index: -1;
+  content: "Videoclub";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff,
+    0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff,
+    0 0 15px #00ffff;
+  z-index: -1;
 }
 
 #parrafo-videoclub {
-    font-size: 1.4rem;
-    color: black;
-    position: relative;
-    overflow: hidden;
+  font-size: 1.4rem;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
 
 #parrafo-videoclub::before {
-    content: 'Bienvenido al Videoclub, tu destino para alquilar las mejores películas y series. Descubre una amplia selección de contenido de entretenimiento y disfruta de un servicio de calidad desde la comodidad de tu hogar.';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #00ffff;
-    text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    z-index: -1;
+  content: "Bienvenido al Videoclub, tu destino para alquilar las mejores películas y series. Descubre una amplia selección de contenido de entretenimiento y disfruta de un servicio de calidad desde la comodidad de tu hogar.";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff,
+    0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff,
+    0 0 15px #00ffff;
+  z-index: -1;
 }
 
 #titulo-peliculas {
-    font-size: 3rem;
-    color: black;
-    position: relative;
-    overflow: hidden;
+  font-size: 3rem;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
 
 #titulo-peliculas::before {
-    content: 'Descubre las Películas Más Populares del Momento';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #00ffff;
-    text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    z-index: -1;
+  content: "Descubre las Películas Más Populares del Momento";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff,
+    0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff,
+    0 0 15px #00ffff;
+  z-index: -1;
 }
 
 #parrafo-peliculas {
-    font-size: 1.4rem;
-    color: black;
-    position: relative;
-    overflow: hidden;
+  font-size: 1.4rem;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
 
 #parrafo-peliculas::before {
-    content: 'Sumérgete en nuestro catálogo y encuentra una amplia selección de las películas más emocionantes, desde los últimos estrenos de Hollywood hasta los clásicos que nunca pasan de moda. Disfruta de una experiencia cinematográfica única desde la comodidad de tu hogar.';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #00ffff;
-    text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    z-index: -1;
+  content: "Sumérgete en nuestro catálogo y encuentra una amplia selección de las películas más emocionantes, desde los últimos estrenos de Hollywood hasta los clásicos que nunca pasan de moda. Disfruta de una experiencia cinematográfica única desde la comodidad de tu hogar.";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff,
+    0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff,
+    0 0 15px #00ffff;
+  z-index: -1;
 }
 
 #titulo-series {
-    font-size: 3rem;
-    color: black;
-    position: relative;
-    overflow: hidden;
+  font-size: 3rem;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
 
 #titulo-series::before {
-    content: 'Explora Nuevas Aventuras con las Mejores Series';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #00ffff;
-    text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
-    z-index: -1;
+  content: "Explora Nuevas Aventuras con las Mejores Series";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff,
+    0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff,
+    0 0 15px #00ffff;
+  z-index: -1;
 }
 
 #parrafo-series {
-    font-size: 1.4rem;
-    color: black;
-    position: relative;
-    overflow: hidden;
+  font-size: 1.4rem;
+  color: black;
+  position: relative;
+  overflow: hidden;
 }
 
 #parrafo-series::before {
-    content: 'Prepárate para maratones inolvidables con nuestras series exclusivas. Desde emocionantes dramas hasta divertidas comedias, nuestro catálogo de series te ofrece una variedad de opciones para todos los gustos. No te pierdas los episodios más recientes y descubre tus nuevas obsesiones televisivas.';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #00ffff;
-    text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff;
+  content: "Prepárate para maratones inolvidables con nuestras series exclusivas. Desde emocionantes dramas hasta divertidas comedias, nuestro catálogo de series te ofrece una variedad de opciones para todos los gustos. No te pierdas los episodios más recientes y descubre tus nuevas obsesiones televisivas.";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff,
+    0 0 4px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 10px #00ffff,
+    0 0 15px #00ffff;
 
-    z-index: -1;
+  z-index: -1;
 }
 
 /* Estilos del footer */
 
 footer {
-    bottom: 0;
-    left: 0;
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--dark);
-    color: white;
-    background-color: #121212;
+  bottom: 0;
+  left: 0;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--dark);
+  color: white;
+  background-color: #121212;
 }
 
 .footer-menus {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 40%;
 }
 
 .footer-container {
-    height: fit-content;
-    width: 100%;
-    padding: 3rem 6rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  height: fit-content;
+  width: 100%;
+  padding: 3rem 6rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footer-content-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .website-logo {
-    margin-top: 0%;
-    margin-bottom: 1.2rem;
-    font-size: calc(1vw + 20px);
+  margin-top: 0%;
+  margin-bottom: 1.2rem;
+  font-size: calc(1vw + 20px);
 }
 
 .footer-info,
 .menu-item-footer {
-    margin: 0.2rem 0;
-    opacity: 0.7;
-    color: white;
-    text-decoration: none;
-    transition: 0.5s;
+  margin: 0.2rem 0;
+  opacity: 0.7;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
 }
 
 .menu-item-footer:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .menu-title {
-    font-size: 2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 
 .social-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100%;
 }
 
 .social-link {
-    height: 100%;
-    width: 30px;
-    background-image: url(../img/rr.ss/FacebookBlanco.png);
-    background-size: 70%;
-    background-position: center;
-    margin-right: 1rem;
-    background-repeat: no-repeat;
+  height: 100%;
+  width: 30px;
+  background-image: url(../img/rr.ss/FacebookBlanco.png);
+  background-size: 70%;
+  background-position: center;
+  margin-right: 1rem;
+  background-repeat: no-repeat;
 }
 
 .social-link:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .social-link:nth-of-type(2) {
-    background-image: url(../img/rr.ss/TwitterBlanco.png);
+  background-image: url(../img/rr.ss/TwitterBlanco.png);
 }
 
 .social-link:nth-of-type(3) {
-    background-image: url(../img/rr.ss/InstagramBlanco.png);
+  background-image: url(../img/rr.ss/InstagramBlanco.png);
 }
 
 @media (max-width: 890px) {
-    .footer-container {
-        padding: 2rem;
-        flex-direction: column;
-    }
+  .footer-container {
+    padding: 2rem;
+    flex-direction: column;
+  }
 
-    .footer-content-container {
-        width: 100%;
-        padding: 2rem 0;
-        border-bottom: 1px solid #2a2a2a;
-        justify-content: center;
-        align-items: center;
-    }
+  .footer-content-container {
+    width: 100%;
+    padding: 2rem 0;
+    border-bottom: 1px solid #2a2a2a;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .footer-content-container:nth-of-type(1) {
-        align-items: flex-start;
-    }
+  .footer-content-container:nth-of-type(1) {
+    align-items: flex-start;
+  }
 
-    .footer-content-container:nth-of-type(3) {
-        border-bottom: none;
-        padding-bottom: 0;
-    }
+  .footer-content-container:nth-of-type(3) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 
-    .footer-menus {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        border-bottom: 1px solid #2a2a2a;
-    }
+  .footer-menus {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #2a2a2a;
+  }
 
-    .footer-menus .footer-content-container:nth-of-type(1) {
-        width: 45%;
-        align-items: flex-start;
-        border-bottom: none;
-    }
+  .footer-menus .footer-content-container:nth-of-type(1) {
+    width: 45%;
+    align-items: flex-start;
+    border-bottom: none;
+  }
 
-    .footer-menus .footer-content-container:nth-of-type(2) {
-        width: 45%;
-        align-items: flex-start;
-        border-bottom: none;
-    }
+  .footer-menus .footer-content-container:nth-of-type(2) {
+    width: 45%;
+    align-items: flex-start;
+    border-bottom: none;
+  }
 }
-
