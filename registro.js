@@ -1,52 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const formularioRegistro = document.getElementById("registro-form");
+const registro = document.querySelector("#registro-form")
+registro.addEventListener("submit", (e)=> {
+    e.preventDefault()
+    const name = document.querySelector("#nombre").value
+    const mail = document.querySelector("#email").value
+    const password = document.querySelector("#contrasena").value
+    const telefono = document.querySelector("#telefono").value
 
-  formularioRegistro.addEventListener("submit", function (event) {
-      event.preventDefault();
+    const Users = JSON.parse(localStorage.getItem('users'))|| []
+    const isUserRegistered = Users.find(user => user.mail === mail)
 
-      // Obtener los valores de los campos del formulario
-      const nombre = document.getElementById("nombre").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const contrasena = document.getElementById("contrasena").value;
-      const confirmContrasena = document.getElementById("confirm-contrasena").value;
-      const telefono = document.getElementById("telefono").value.trim();
+    if(isUserRegistered){
+        return alert("El usuario ya esta registrado!")
+    }
+    Users.push({name: name,
+                mail: mail,
+                password: password,
+                telefono: telefono
+    })
+    console.log(Users)
+    localStorage.setItem('users', JSON.stringify(Users))
+    console.log(Users)
+    alert('registro exitoso!')
+    //redireccion a login
+    window.location.href="login.html"
 
-      // Validar que todas las contraseñas sean iguales
-      if (contrasena !== confirmContrasena) {
-          alert("Las contraseñas no coinciden.");
-          return;
-      }
-
-      // Crear objeto de usuario
-      const usuario = {
-          nombre: nombre,
-          email: email,
-          contrasena: contrasena,
-          telefono: telefono
-      };
-
-      // Convertir objeto a formato JSON
-      const usuarioJSON = JSON.stringify(usuario);
-
-      // Crear un objeto Blob para almacenar el JSON
-      const blob = new Blob([usuarioJSON], { type: "application/json" });
-
-      // Crear enlace de descarga
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "usuario.json";
-
-      // Simular clic en el enlace para descargar el archivo
-      document.body.appendChild(a);
-      a.click();
-
-      // Liberar recursos
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-
-      // Limpiar formulario
-      formularioRegistro.reset();
-  });
-});
-
+})

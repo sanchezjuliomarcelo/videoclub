@@ -1,31 +1,26 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Videoclub - Registro</title>
-        <!-- SEO -->
-        <meta name="description" content="Regístrate en el Videoclub para acceder a nuestro catálogo completo y disfrutar de películas y series de alta calidad. Únete a nuestra comunidad de amantes del cine y la televisión y comienza a disfrutar de los beneficios de ser miembro.">
-        <meta name="keywords" content="registro en el videoclub, crear cuenta, suscripción al videoclub, membresía, registrarse para alquilar películas, registrarse para alquilar series, cómo registrarse.">
     <!-- Agrega las fuentes de Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
     <!-- Agrega tu hoja de estilos personalizada -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../StylePages/style-registro.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../img/favicon.png">
 </head>
-
 <body>
     <!-- Agrega el logo y el menú de navegación -->
     <header>
         <div class="header-logo">
-            <a href="../index.html">
-                <img src="../img/logo.svg" alt="Videoclub Logo">
-            </a>
+            <img src="../img/logo.svg" alt="Videoclub Logo">
         </div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -38,30 +33,18 @@
             </ul>
         </nav>
     </header>
-    <div class="registro-container">
-        <div class="imagen-registro">
-            <img src="../img/registro.gif" alt="">
-        </div>
-
-        <form id="registro-form">
-            <label for="nombre">Nombre y Apellido:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Nombre y Apellido">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="ejemplo@mail.com">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required
-                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Mínimo 8 caracteres, con letras y números"
-                placeholder="Mínimo 8 caracteres, con letras y números">
-            <label for="confirm-contrasena">Confirmar Contraseña:</label>
-            <input type="password" id="confirm-contrasena" name="confirm-contrasena" required
-                placeholder="Confirmar Contraseña">
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required pattern="^[1-9]\d{8}$" title="Sin el 0 y sin el 15"
-                placeholder="Sin el 0 y sin el 15">
-            <button type="submit">Registrarse</button>
-        </form>
-        <p>Ya tienes una cuenta?<a href="./login.html">Login</a></p>
-    </div>
+    
+    <div class="container">
+        <h2>Login</h2>
+            <form id="loginForm" >
+                <label>Mail</label>
+                <input type="email" placeholder="" id="mail" required autofocus>
+                <label for="">Contraseña</label>
+                <input type="password" placeholder="" id="contrasena" required>
+                <input type="submit" value="Ingresar">
+            </form>
+        <p>No tienes una cuenta? <a href="registro.html">Registro</a></p>
+</div>
     <!-- Footer -->
     <footer>
         <div class="footer-container">
@@ -94,9 +77,8 @@
                 </div>
             </div>
         </div>
-        <p>&copy; 2024 Videoclub. Todos los derechos reservados.</p>
     </footer>
-    <script src="../registro.js"></script>
+    <script src="../login.js"></script>
 </body>
-
 </html>
+

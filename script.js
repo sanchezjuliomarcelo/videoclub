@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+
+    const user = JSON.parse(localStorage.getItem('login-success')) || false
+    if(!user){
+        window.location.href = './pages/login.html'
+    }
+
+    const logout = document.querySelector('#logout')
+
+    logout.addEventListener('click', ()=>{
+        alert('Hasta pronto!')
+        localStorage.removeItem('login-success')
+        window.location.href = '../pages/login.html'
+    });
+
+
     const banners = document.querySelectorAll(".banner img");
     let currentBanner = 0;
 
