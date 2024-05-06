@@ -21,8 +21,9 @@
     width: 20%;
 }
 
+
 #registro-form {
-    background-color: #ffffffa2;
+    background-color: #0c0c0ca2;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -32,6 +33,7 @@
 label {
     margin-bottom: 5px;
     display: block;
+    color: azure;
 }
 
 input[type="text"],
@@ -45,6 +47,11 @@ button {
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+p, h2{
+    text-align: center;
+    color: azure;
 }
 
 button {
