@@ -1,5 +1,5 @@
 const API_URL =
-    "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=bea9d2fb3983892620514e92dbbf032e&page=1";
+    "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=bea9d2fb3983892620514e92dbbf032e&page=1&language=es-ES";
 
 const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
 
@@ -41,6 +41,7 @@ function displayMovies(movies) {
                 </div>
             </div>
         `;
+
         main.appendChild(movieElement);
     });
 }
@@ -65,3 +66,4 @@ form.addEventListener('submit', (e) => {
         window.location.reload();
     }
 });
+
