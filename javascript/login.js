@@ -23,11 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 sessionStorage.setItem('current-user', JSON.stringify(user));
                 sessionStorage.setItem('current-password', password);
 
-                alert(`Bienvenido ${user.name}`);
+                // Mostrar un mensaje de bienvenida en una ventana emergente
+                mostrarMensaje(`Bienvenido ${user.name}`, "green");
                 window.location.href = 'index.html'; // Corregido: Redireccionamiento directo a index.html
             } else {
-                // Si el usuario no existe o la contraseña es incorrecta, mostrar un mensaje de error
-                alert('Usuario y/o contraseña incorrectos!');
+                // Si el usuario no existe o la contraseña es incorrecta, mostrar un mensaje de error en una ventana emergente
+                mostrarMensaje('Usuario y/o contraseña incorrectos!', "red");
                 // Limpiar los campos de contraseña para un nuevo intento
                 passwordInput.value = '';
                 passwordInput.focus(); // Poner el foco en el campo de contraseña
@@ -36,3 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function mostrarMensaje(mensaje, color) {
+  Swal.fire({
+    text: mensaje,
+    icon: color === "green" ? "success" : "warning",
+    timer: 2000,
+    timerProgressBar: true,
+    position: 'center',
+    toast: true,
+    showConfirmButton: false,
+    customClass: {
+      container: 'swal2-center-container'
+    }
+  });
+}

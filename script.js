@@ -8,10 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const logout = document.querySelector('#logout');
 
     logout.addEventListener('click', () => {
-        alert('Hasta pronto!');
-        sessionStorage.removeItem('current-user');
-        sessionStorage.removeItem('current-password');
-        window.location.href = 'login.html'; // Redireccionar al usuario al login al cerrar sesión
+        mostrarMensaje('Hasta pronto!', 'green', () => {
+            sessionStorage.removeItem('current-user');
+            sessionStorage.removeItem('current-password');
+            window.location.href = 'login.html'; // Redireccionar al usuario al login al cerrar sesión
+        });
     });
 
     const banners = document.querySelectorAll(".banner img");
@@ -54,3 +55,19 @@ document.querySelectorAll('.card').forEach(item => {
         estrenos.style.backgroundImage = backgroundImage;
     });
 });
+
+function mostrarMensaje(mensaje, color, callback) {
+  Swal.fire({
+    text: mensaje,
+    icon: color === "green" ? "success" : "warning",
+    timer: 2000,
+    timerProgressBar: true,
+    position: 'center',
+    toast: true,
+    showConfirmButton: false,
+    customClass: {
+      container: 'swal2-center-container'
+    },
+    willClose: callback
+  });
+}
