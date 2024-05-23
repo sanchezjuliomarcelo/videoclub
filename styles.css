@@ -123,17 +123,17 @@ nav ul li a:hover {
     color: #fff;
   }
 
-  .menu-toggle:checked + .menu-icon + nav {
+  .menu-toggle:checked+.menu-icon+nav {
     display: flex;
   }
 
-  .container-estrenos{
+  .container-estrenos {
     height: 40vh;
     padding: 0;
     margin: 0;
   }
 
-  .card{
+  .card {
     border: 1px solid white;
   }
 
@@ -161,20 +161,20 @@ nav ul li a:hover {
 }
 
 /* Estilos para el contenedor de Estrenos */
-.container-estrenos{
-    width: 100%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container-estrenos {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container-estrenos > h2 {
-    margin: 1% 0;
-    color: white;
-    font-size: 4vw;
-    text-shadow: 21px 6px 6px rgba(15,159,225,0.63);
-  }
+.container-estrenos>h2 {
+  margin: 1% 0;
+  color: white;
+  font-size: 4vw;
+  text-shadow: 21px 6px 6px rgba(15, 159, 225, 0.63);
+}
 
 .estrenos {
   width: 70vw;
@@ -188,6 +188,7 @@ nav ul li a:hover {
   border-radius: 10px;
   background-position-x: center;
 }
+
 .card {
   width: 20vw;
   height: 20%;
@@ -208,8 +209,8 @@ nav ul li a:hover {
   flex-direction: column;
 }
 
-.card:hover{
-    transform: scale(1.1);
+.card:hover {
+  transform: scale(1.1);
 }
 
 #card1 {
@@ -224,20 +225,20 @@ nav ul li a:hover {
   background-image: url("./img/peliculas/mi-viillano-fav-4.jpg");
 }
 
-#card4{
+#card4 {
   background-image: url("./img/peliculas/venom-3.jpg");
 }
 
-#card5{
+#card5 {
   background-image: url("./img/peliculas/survivors-NodeJs.jpg");
 }
 
-.card p{
-    background-color: black;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+.card p {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -265,14 +266,15 @@ nav ul li a:hover {
 
 
 .image-container {
-    border-radius: 10px;
-    flex: 1;
-    margin: 20px 20px 20px 20px;
-    transition: 0.3s ease;
-    overflow: hidden;
+  border-radius: 10px;
+  flex: 1;
+  margin: 20px 20px 20px 20px;
+  transition: 0.3s ease;
+  overflow: hidden;
 }
-.image-container:hover{
-    transform: scale(1.05);
+
+.image-container:hover {
+  transform: scale(1.05);
 }
 
 .image-container img {

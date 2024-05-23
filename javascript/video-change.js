@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "../video/background6.mp4",
         "../video/background7.mp4"
     ];
-    
+
     const videoElement = document.getElementById("video-background");
     const randomIndex = Math.floor(Math.random() * videos.length);
-    
+
     videoElement.src = videos[randomIndex];
     videoElement.play();
 });

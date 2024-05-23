@@ -8,7 +8,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000; /* Fallback color */
+    background: #000;
+    /* Fallback color */
 }
 
 /* Estilo para el contenedor del video de fondo */
@@ -44,7 +45,8 @@ body {
 
 /* Estilo para el formulario de registro */
 #login-form {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo semi-transparente */
     padding: 20px;
     border-radius: 10px;
     width: 300px;

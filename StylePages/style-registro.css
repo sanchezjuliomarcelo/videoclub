@@ -10,14 +10,14 @@
     flex-direction: column;
 }
 
-.imagen-registro{
+.imagen-registro {
     width: 100%;
     display: flex;
     justify-content: center;
     height: max-content
 }
 
-.imagen-registro img{
+.imagen-registro img {
     width: 20%;
 }
 
@@ -49,7 +49,8 @@ button {
     box-sizing: border-box;
 }
 
-p, h2{
+p,
+h2 {
     text-align: center;
     color: azure;
 }

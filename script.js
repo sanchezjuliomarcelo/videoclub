@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const user = JSON.parse(sessionStorage.getItem('current-user'));
 
     if (!user) {
@@ -57,17 +57,17 @@ document.querySelectorAll('.card').forEach(item => {
 });
 
 function mostrarMensaje(mensaje, color, callback) {
-  Swal.fire({
-    text: mensaje,
-    icon: color === "green" ? "success" : "warning",
-    timer: 2000,
-    timerProgressBar: true,
-    position: 'center',
-    toast: true,
-    showConfirmButton: false,
-    customClass: {
-      container: 'swal2-center-container'
-    },
-    willClose: callback
-  });
+    Swal.fire({
+        text: mensaje,
+        icon: color === "green" ? "success" : "warning",
+        timer: 2000,
+        timerProgressBar: true,
+        position: 'center',
+        toast: true,
+        showConfirmButton: false,
+        customClass: {
+            container: 'swal2-center-container'
+        },
+        willClose: callback
+    });
 }
