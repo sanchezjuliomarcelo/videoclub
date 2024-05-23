@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videoclub - login</title>
+    <!-- Fuentes de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="/StylePages/style-login.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+</head>
+
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="video-background">
+            <!-- La fuente del video será establecida dinámicamente por JavaScript -->
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+    <div id="login-form">
+        <h2>Ingreso</h2>
+        <form id="loginForm">
+            <label for="mail">Email</label>
+            <input type="email" id="mail" required autofocus>
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p>No tienes una cuenta? <a href="/pages/registro.html">Registro</a></p>
+    </div>
+    <script src="/javascript/login.js"></script>
+    <script src="/javascript/video-change.js"></script>
+</body>
+
+</html>

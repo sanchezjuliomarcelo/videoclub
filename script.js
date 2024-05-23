@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const user = JSON.parse(sessionStorage.getItem('current-user'));
 
-
-    const user = JSON.parse(localStorage.getItem('login-success')) || false
-    if(!user){
-        window.location.href = './pages/login.html'
+    if (!user) {
+        window.location.href = 'login.html'; // Redireccionar al usuario al login si no está autenticado
     }
 
-    const logout = document.querySelector('#logout')
+    const logout = document.querySelector('#logout');
 
-    logout.addEventListener('click', ()=>{
-        alert('Hasta pronto!')
-        localStorage.removeItem('login-success')
-        window.location.href = '../pages/login.html'
+    logout.addEventListener('click', () => {
+        alert('Hasta pronto!');
+        sessionStorage.removeItem('current-user');
+        sessionStorage.removeItem('current-password');
+        window.location.href = 'login.html'; // Redireccionar al usuario al login al cerrar sesión
     });
-
 
     const banners = document.querySelectorAll(".banner img");
     let currentBanner = 0;
@@ -50,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.querySelectorAll('.card').forEach(item => {
     item.addEventListener('mouseover', event => {
-      const estrenos = document.getElementById('estrenos');
-      const backgroundImage = window.getComputedStyle(event.target).getPropertyValue('background-image');
-      estrenos.style.backgroundImage = backgroundImage;
+        const estrenos = document.getElementById('estrenos');
+        const backgroundImage = window.getComputedStyle(event.target).getPropertyValue('background-image');
+        estrenos.style.backgroundImage = backgroundImage;
     });
-  });
+});
