@@ -128,6 +128,7 @@ nav ul li a:hover {
   }
 
   .container-estrenos {
+    width: 100vw;
     height: 40vh;
     padding: 0;
     margin: 0;
@@ -177,8 +178,8 @@ nav ul li a:hover {
 }
 
 .estrenos {
-  width: 70vw;
-  height: 50vh;
+  width: 100vw;
+  height: 80vh;
   justify-content: center;
   overflow: hidden;
   transition: background-image 0.5s ease;
@@ -187,6 +188,7 @@ nav ul li a:hover {
   align-items: flex-end;
   border-radius: 10px;
   background-position-x: center;
+  background-position: 20%;
 }
 
 .card {
