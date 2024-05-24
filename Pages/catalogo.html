@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videoclub - Catálogo</title>
-    <!-- SEO -->
+    <!-- Optimización para motores de búsqueda (SEO) -->
     <meta name="description"
-        content="Explora nuestro extenso catálogo de películas y series disponibles para alquilar. Desde los últimos estrenos hasta clásicos atemporales, tenemos algo para todos los gustos. Encuentra tus favoritos y disfruta de horas de entretenimiento.">
+        content="Explorá nuestro extenso catálogo de películas y series disponibles para alquilar. Desde los últimos estrenos hasta clásicos atemporales, tenemos algo para todos los gustos. Encontrá tus favoritos y disfrutá de horas de entretenimiento.">
     <meta name="keywords"
-        content="catálogo de películas, catálogo de series, alquiler de películas en línea, alquiler de series en línea, películas disponibles, series disponibles, películas populares, series populares.">
-    <!-- Agrega las fuentes de Google Fonts -->
+        content="catálogo de películas, catálogo de series, alquiler de películas online, alquiler de series online, películas disponibles, series disponibles, películas populares, series populares.">
+    <!-- Fuentes de Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <!-- Agrega tu hoja de estilos personalizada -->
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../StylePages/style-catalogo.css">
     <!-- Favicon -->
@@ -23,11 +23,11 @@
 </head>
 
 <body>
-    <!-- Agrega el logo y el menú de navegación -->
+    <!-- Encabezado con logo y menú de navegación -->
     <header>
         <div class="header-logo">
             <a href="../index.html">
-                <img src="../img/logo.svg" alt="Videoclub Logo">
+                <img src="../img/logo.svg" alt="Logo de Videoclub">
             </a>
         </div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -43,6 +43,7 @@
         </nav>
     </header>
 
+    <!-- Categorías del catálogo -->
     <div class="contenedor-categorias">
         <div class="division-categoria">
             <div class="card-categoria">
@@ -50,51 +51,52 @@
             </div>
             <p>Comedia</p>
         </div>
-
         <div class="division-categoria">
             <div class="card-categoria">
                 <img src="../img/catalogo/categorias/terror.png" alt="">
             </div>
             <p>Terror</p>
         </div>
-
         <div class="division-categoria">
             <div class="card-categoria">
                 <img src="../img/catalogo/categorias/ciencia-ficcion.png" alt="">
             </div>
-            <p>Ciencia Ficcion</p>
+            <p>Ciencia Ficción</p>
         </div>
-
         <div class="division-categoria">
             <div class="card-categoria">
                 <img src="../img/catalogo/categorias/infantiles.png" alt="">
             </div>
             <p>Infantiles</p>
         </div>
-
         <div class="division-categoria">
             <div class="card-categoria">
                 <img src="../img/catalogo/categorias/clasico.png" alt="">
             </div>
-            <p>Clasicos</p>
+            <p>Clásicos</p>
         </div>
     </div>
 
+    <!-- Encabezado del catálogo -->
     <section class="container">
         <div class="encabezado-catalogo">
             <h1>Catálogo</h1>
-            <p>Explora nuestro extenso catálogo de películas y series disponibles para alquilar. Desde los últimos
-                estrenos hasta clásicos atemporales, tenemos algo para todos los gustos. Encuentra tus favoritos y
-                disfruta de horas de entretenimiento.</p>
+            <p>Explorá nuestro extenso catálogo de películas y series disponibles para alquilar. Desde los últimos
+                estrenos hasta clásicos atemporales, tenemos algo para todos los gustos. Encontrá tus favoritos y
+                disfrutá de horas de entretenimiento.</p>
         </div>
+        <!-- Formulario de búsqueda -->
         <form id="form">
             <input type="text" id="search" class="search" placeholder="Buscar...">
         </form>
-        <main id="main">
-
-        </main>
     </section>
-    <!-- Footer -->
+
+    <!-- Contenido principal -->
+    <main id="main">
+        <!-- Aquí se cargará el contenido del catálogo -->
+    </main>
+
+    <!-- Pie de página -->
     <footer>
         <div class="footer-container">
             <div class="footer-content-container">
@@ -105,7 +107,7 @@
             <div class="footer-menus">
                 <div class="footer-content-container">
                     <span class="menu-title">Políticas</span>
-                    <a href="../subpages/privacidad.html" class="menu-item-footer">Politicas de privacidad</a>
+                    <a href="../subpages/privacidad.html" class="menu-item-footer">Políticas de privacidad</a>
                     <a href="../subpages/termycond.html" class="menu-item-footer">Términos de servicio</a>
                 </div>
                 <div class="footer-content-container">
@@ -119,13 +121,14 @@
             <div class="footer-content-container">
                 <span class="menu-title">Redes Sociales</span>
                 <div class="social-container">
-                    <a href="#" class="social-link"></a>
-                    <a href="#" class="social-link"></a>
-                    <a href="#" class="social-link"></a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- Scripts -->
     <script src="../javascript/catalogo.js"></script>
     <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
