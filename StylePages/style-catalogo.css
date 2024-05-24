@@ -1,20 +1,28 @@
-/*catalogo*/
+/* Estilos generales */
+h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de las categorías */
 .contenedor-categorias {
   width: 100%;
   background-color: rgb(4, 4, 59);
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 50px;
   padding: 20px 0;
-}
-
-.movie-container * {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .contenedor-categorias p {
@@ -23,6 +31,7 @@
   color: white;
 }
 
+/* Las divisiones entre categorías */
 .division-categoria {
   display: flex;
   flex-direction: column;
@@ -31,36 +40,35 @@
   transition: 0.3s ease;
 }
 
+/* Las tarjetas de cada categoría */
 .card-categoria {
   width: 150px;
-  /* Ancho de la tarjeta */
   height: 150px;
-  /* Altura de la tarjeta */
   border-radius: 50%;
-  /* Hace que la tarjeta sea circular */
   border: 5px solid white;
-  /* Borde blanco */
   background-color: rgb(4, 4, 59);
-  /* Color de fondo de la tarjeta */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-
+/* Efecto al pasar el mouse sobre la categoría */
 .division-categoria:hover {
   transform: scale(1.2);
 }
 
+/* Imágenes dentro de las tarjetas */
 .card-categoria img {
   width: 60%;
 }
 
+/* Encabezado del catálogo */
 .encabezado-catalogo {
   color: white;
 }
 
+/* Estilo del campo de búsqueda */
 .search {
   background-color: transparent;
   border: 2px solid;
@@ -78,78 +86,46 @@
   outline: none;
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (max-width: 767px) {
+  .contenedor-categorias {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .division-categoria {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-categoria {
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-categoria img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
-.movie {
-  width: 300px;
-  margin: 1rem;
-  background-color: #333;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  border-radius: 3px;
-}
-
-.movie img {
-  width: 100%;
-}
-
-.movie-info {
-  color: #05e0f0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem 1rem;
-  letter-spacing: 1px;
-}
-
-.movie-info span {
-  background-color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  font-weight: bold;
-}
-
-/* Corregido el nombre de las clases */
-.movie-info .green {
-  color: green;
-}
-
-.movie-info .orange {
-  color: orange;
-}
-
-.movie-info .red {
-  color: red;
-}
-
-.overview {
-  background-color: lightgray;
-  color: #3003f8;
-  padding: 2rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  max-height: 100%;
-  transform: translateY(101%);
-  transition: transform 0.3s ease;
-  pointer-events: none;
-  opacity: 0;
-}
-
-
-.movie:hover .overview,
-.overview:hover {
-  transform: translateY(0);
-  pointer-events: auto;
-  opacity: 1;
-}
-
-@media screen and (max-width: 768px) {
+/* Estilos para tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .contenedor-categorias {
     height: 30vh;
   }
@@ -157,5 +133,122 @@ main {
   .card-categoria {
     width: 120px;
     height: 120px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: #333;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  .movie img {
+    width: 100%;
+  }
+
+  .movie-info {
+    color: #05e0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 1px;
+  }
+
+  .movie-info span {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+
+  .movie-info .green {
+    color: green;
+  }
+
+  .movie-info .orange .movie-info .orange {
+    color: orange;
+  }
+
+  .movie-info .red {
+    color: red;
+  }
+
+  .overview {
+    background-color: lightgray;
+    color: #3003f8;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .movie:hover .overview,
+  .overview:hover {
+    transform: translateY(0);
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Tarjetas de las películas */
+  .movie {
+    width: 90%;
+    margin: 10px auto;
+    position: relative;
+  }
+
+  .movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+    display: none;
+  }
+
+  /* Mostrar información al pasar el mouse */
+  .movie:hover .movie-info {
+    display: block;
+  }
+
+  .movie-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  /* Estilos para el rating */
+  .movie-info span {
+    background-color: #ff9800;
+    padding: 2px 5px;
+    border-radius: 5px;
   }
 }

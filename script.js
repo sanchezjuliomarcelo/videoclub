@@ -71,3 +71,50 @@ function mostrarMensaje(mensaje, color, callback) {
         willClose: callback
     });
 }
+
+const API_URL =
+    "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=bea9d2fb3983892620514e92dbbf032e&page=1&language=es-ES";
+
+const IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
+
+const main = document.getElementById('main');
+
+// carrusel
+getMovies(API_URL);
+async function getMovies(url) {
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        displayCarousel(data.results);
+        console.log(data.results);
+    } catch (error) {
+        console.error("Error al obtener datos de películas:", error);
+    }
+}
+
+function displayCarousel(movies) {
+    const carouselContainer = document.createElement('div');
+    carouselContainer.classList.add('carousel-container');
+
+    movies.slice(0, 10).forEach((movie) => {
+        const { title, poster_path, vote_average, overview, release_date, original_language } = movie;
+        const movieElement = document.createElement('div');
+        movieElement.classList.add('movie');
+        movieElement.innerHTML = `
+            <img src="${IMAGE_PATH}${poster_path}" alt="${title}" />
+            <div class='movie-info'>
+                <h3>${title}</h3>
+            </div>
+        `;
+        carouselContainer.appendChild(movieElement);
+    });
+
+    carrousel.appendChild(carouselContainer);
+
+    setInterval(() => {
+        carouselContainer.scrollLeft += carouselContainer.offsetWidth;
+        if (carouselContainer.scrollLeft === (carouselContainer.scrollWidth - carouselContainer.offsetWidth)) {
+            carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+    }, 3000);
+}

@@ -67,3 +67,12 @@ form.addEventListener('submit', (e) => {
     }
 });
 
+const logout = document.querySelector('#logout');
+
+logout.addEventListener('click', () => {
+    mostrarMensaje('Hasta pronto!', 'green', () => {
+        sessionStorage.removeItem('current-user');
+        sessionStorage.removeItem('current-password');
+        window.location.href = 'login.html'; // Redireccionar al usuario al login al cerrar sesión
+    });
+});

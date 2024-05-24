@@ -38,44 +38,43 @@
                 <li><a class="activo" href="catalogo.html">Catálogo</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="registro.html">Registro</a></li>
-                <li><a id="logout" href="#">Salir</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Categorías del catálogo -->
-    <div class="contenedor-categorias">
-        <div class="division-categoria">
-            <div class="card-categoria">
-                <img src="../img/catalogo/categorias/icon-comedia.png" alt="">
-            </div>
-            <p>Comedia</p>
-        </div>
-        <div class="division-categoria">
-            <div class="card-categoria">
-                <img src="../img/catalogo/categorias/terror.png" alt="">
-            </div>
-            <p>Terror</p>
-        </div>
-        <div class="division-categoria">
-            <div class="card-categoria">
-                <img src="../img/catalogo/categorias/ciencia-ficcion.png" alt="">
-            </div>
-            <p>Ciencia Ficción</p>
-        </div>
-        <div class="division-categoria">
-            <div class="card-categoria">
-                <img src="../img/catalogo/categorias/infantiles.png" alt="">
-            </div>
-            <p>Infantiles</p>
-        </div>
-        <div class="division-categoria">
-            <div class="card-categoria">
-                <img src="../img/catalogo/categorias/clasico.png" alt="">
-            </div>
-            <p>Clásicos</p>
-        </div>
+<!-- Categorías del catálogo -->
+<div class="contenedor-categorias" id="categorias">
+    <div class="division-categoria">
+        <button class="card-categoria" data-slide="prev">
+            <img src="../img/catalogo/categorias/icon-comedia.png" alt="">
+        </button>
+        <p>Comedia</p>
     </div>
+    <div class="division-categoria">
+        <button class="card-categoria" data-slide="next">
+            <img src="../img/catalogo/categorias/terror.png" alt="">
+        </button>
+        <p>Terror</p>
+    </div>
+    <div class="division-categoria">
+        <button class="card-categoria" data-slide="next">
+            <img src="../img/catalogo/categorias/ciencia-ficcion.png" alt="">
+        </button>
+        <p>Ciencia Ficción</p>
+    </div>
+    <div class="division-categoria">
+        <button class="card-categoria" data-slide="next">
+            <img src="../img/catalogo/categorias/infantiles.png" alt="">
+        </button>
+        <p>Infantiles</p>
+    </div>
+    <div class="division-categoria">
+        <button class="card-categoria" data-slide="next">
+            <img src="../img/catalogo/categorias/clasico.png" alt="">
+        </button>
+        <p>Clásicos</p>
+    </div>
+</div>
 
     <!-- Encabezado del catálogo -->
     <section class="container">
@@ -131,7 +130,6 @@
     </footer>
     <!-- Scripts -->
     <script src="../javascript/catalogo.js"></script>
-    <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
