@@ -1,0 +1,62 @@
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 0 0 calc(25% - 20px);
+    border: 1px solid #3003f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+}
+
+.card h2,
+.card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+
+    padding: 0;
+
+    .card p {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    .card a {
+        color: #05e0f0;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        .card a:hover {
+            color: #05e0f0;
+        }
+
+        /* responsive */
+        @media (max-width: 1023px) {
+            .card {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .card {
+                flex: 0 0 calc(100% - 20px);
+            }
+        }
+    }
+}
